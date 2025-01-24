@@ -227,7 +227,7 @@ def PFQRmain(contents,picturesize):
     # ret, qrimage_bin = cv2.threshold(qrimage_gray, threshold, 255, cv2.THRESH_BINARY)
 
 
-    ##(要修正)パターン3-1モジュール毎に二値化，閾値は5×5モジュールを1ブロックとしたときのブロック全体の輝度値の平均
+    ##(要修正)パターン3-1モジュール毎に二値化，閾値は9×9モジュールを1ブロックとしたときのブロック全体の輝度値の平均
     qrimage_bin = thresholding_9modblock(qrimage_gray,picture_height,picture_width,pictureposition_offset_x,pictureposition_offset_y)
 
     cv2.imwrite("logoinQR_bin.bmp", qrimage_bin)
